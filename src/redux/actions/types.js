@@ -1,0 +1,3 @@
+
+export const GET_ASTRONOMOIES_LIST = "GET_ASTRONOMOIES_LIST"
+export const DATE = "DATE"
