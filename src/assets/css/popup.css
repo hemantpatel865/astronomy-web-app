@@ -7,6 +7,9 @@
   .modal-wrapper{
     flex-direction: column;
   }
+  .modal-wrapper .explanation{
+    text-align: justify;
+  }
 }
 .modal-wrapper .info .title{
   font-weight: 600;
@@ -16,6 +19,11 @@
 .modal-wrapper .info {
   padding-right: 20px;
   flex: 1;
+}
+@media(max-width: 767px){
+  .modal-wrapper .info {
+    padding-right: 0px;
+  }
 }
 .modal-wrapper .image {
   flex: 1;

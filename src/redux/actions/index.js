@@ -22,7 +22,7 @@ export const getAstronomiesList = (handleLoader, startDate, endDate) => {
         .then((data) => {
             dispatch({
                 type: GET_ASTRONOMOIES_LIST,
-                payload: data
+                payload: [data]
             })
             handleLoader()
         })

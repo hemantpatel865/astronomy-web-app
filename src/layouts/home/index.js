@@ -20,7 +20,7 @@ const Home = () => {
   const handleFetch = () => {
     setShow(true)
     const start_date = moment(DATE, "YYYY-MM-DD").add(1, "days").format("YYYY-MM-DD")
-    const end_date = moment(start_date, "YYYY-MM-DD").add(7, "days").format("YYYY-MM-DD")
+    const end_date = moment(start_date, "YYYY-MM-DD").add(6, "days").format("YYYY-MM-DD")
     dispatch(Actions.getAstronomiesList(handleLoader, start_date, end_date))
     dispatch(Actions.setDate(end_date))
   }
@@ -31,8 +31,8 @@ const Home = () => {
   }
 
   useEffect(() => {
-    dispatch(Actions.getAstronomiesList(handleLoader, "2022-10-01", "2022-10-09"))
-    dispatch(Actions.setDate("2022-10-09"))
+    dispatch(Actions.getAstronomiesList(handleLoader, "2022-10-01", "2022-10-08"))
+    dispatch(Actions.setDate("2022-10-08"))
   }, [])
 
   return (
@@ -41,7 +41,7 @@ const Home = () => {
       {loader ? 
         <Loader padding="pt-5"/>: 
         <>
-          <LatestAstronomy data={ASTRONOMIES_LIST[0]}/>
+          <LatestAstronomy data={ASTRONOMIES_LIST[0][0]}/>
           <Astronomies data={ASTRONOMIES_LIST} handleFetch={handleFetch}/>
           <div className='text-center pb-4'>
           {show ? 

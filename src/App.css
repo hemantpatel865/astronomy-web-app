@@ -2,13 +2,23 @@
     margin: 0;
     padding: 0;
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 
+.astronomies_holder{
+ overflow: auto;   
+ padding-left: calc(5% - 50.5px);
+}
+.astronomies_holder::-webkit-scrollbar {
+  display: none;
+}
 .astronomies_wrapper{
-    margin-top: 40px;
     display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-around; */
+    width: fit-content;
+    margin-bottom: 40px;
 }
 .astronomies_wrapper a{
     text-decoration: none;
@@ -25,7 +35,7 @@
     height: 100%;
     overflow: hidden;
     border: 1px solid #eee;
-    margin: 0 20px 40px;
+    margin: 0 14px 0px;
     cursor: pointer;
     box-shadow: 1px 2px 4px #eee;
 }
@@ -36,7 +46,7 @@
     height: 100%;
     overflow: hidden;
     border: 1px solid #eee;
-    margin: 0 20px 40px;
+    margin: 0 14px 0px;
     cursor: pointer;
     box-shadow: 5px 5px 5px #ddd;
 }
@@ -150,6 +160,7 @@
   @media(max-width: 767px){
     .astronomy .info .explanation{
       -webkit-line-clamp: 4;
+      text-align: justify;
     }
   }
   .astronomy .info .copy-right{
